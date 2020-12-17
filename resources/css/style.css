@@ -1,0 +1,116 @@
+/* mobile first */ 
+
+* {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.navbar-nav ul {
+    display: inline-flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #777;
+    text-decoration: underline;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.banner {
+    background-image: url("../images/geometric.jpg");
+    text-align: center;
+}
+
+.local {
+    background-image: url('../images/local.jpg');
+}
+
+.sustainable {
+    background-image: url('../images/green.jpg');
+}
+
+.beautiful {
+    background-image: url('../images/beautiful.jpg');
+}
+
+.banner,
+.local, 
+.sustainable, 
+.beautiful {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px;
+    margin: 10px 0;
+    height: 400px;
+    position: relative;
+}
+
+.banner >*,
+.local > *,
+.sustainable > *, 
+.beautiful > * {
+    background: #444;
+    color: white;
+    padding: 5px;
+    margin: 0;
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.people img {
+    border-radius: 50%;
+    padding: 5%;
+}
+
+.people h4,
+.people p {
+    text-align: center;
+}
+
+/* media query for larger screens */ 
+
+@media only screen and (min-width: 600px) {
+    .banner {
+        height: 600px;
+    }
+    .products {
+        display: inline-flex;
+    }
+    .people {
+        display: inline-flex;
+    }
+    .people article img {
+        height: 400px;
+        overflow: hidden;
+        object-fit: cover;
+    }
+}
